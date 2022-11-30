@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_rv_company_padding">8dp</dimen>
+    <dimen name="item_rv_company_iv_width">80dp</dimen>
+    <dimen name="item_rv_company_iv_height">80dp</dimen>
+    <dimen name="item_rv_company_tv_title_margin_start">8dp</dimen>
+    <dimen name="item_rv_company_tv_title_text_size">16sp</dimen>
+    <dimen name="fragment_list_companies_error_info_padding">8dp</dimen>
+</resources>

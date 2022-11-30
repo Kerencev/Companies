@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/itemRvCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/item_rv_company_padding">
+
+            <ImageView
+                android:id="@+id/itemRvImage"
+                android:layout_width="@dimen/item_rv_company_iv_width"
+                android:layout_height="@dimen/item_rv_company_iv_height"
+                android:contentDescription="@string/image_of_the_company"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/itemRvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/item_rv_company_tv_title_margin_start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/item_rv_company_tv_title_text_size"
+                android:textStyle="bold"
+                tools:text="The James Shark Pub" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.2"
+        android:background="@color/black" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
