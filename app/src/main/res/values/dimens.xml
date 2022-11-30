@@ -6,4 +6,20 @@
     <dimen name="item_rv_company_tv_title_margin_start">8dp</dimen>
     <dimen name="item_rv_company_tv_title_text_size">16sp</dimen>
     <dimen name="fragment_list_companies_error_info_padding">8dp</dimen>
+    <dimen name="fragment_list_companies_error_info_text_size">16sp</dimen>
+    <dimen name="fragment_details_title_margin_top">8dp</dimen>
+    <dimen name="fragment_details_img_width">120dp</dimen>
+    <dimen name="fragment_details_img_height">120dp</dimen>
+    <dimen name="fragment_details_img_margin_top">4dp</dimen>
+    <dimen name="fragment_details_content_margin_horizontal">8dp</dimen>
+    <dimen name="fragment_details_description_margin_top">4dp</dimen>
+    <dimen name="fragment_details_description_text_size">16sp</dimen>
+    <dimen name="fragment_details_url_margin_top">16dp</dimen>
+    <dimen name="fragment_details_url_text_size">16sp</dimen>
+    <dimen name="fragment_details_phone_margin_top">4dp</dimen>
+    <dimen name="fragment_details_phone_text_size">16sp</dimen>
+    <dimen name="fragment_details_linear_address_margin_top">4dp</dimen>
+    <dimen name="fragment_details_linear_address_margin_bottom">16dp</dimen>
+    <dimen name="fragment_details_address_text_size">16sp</dimen>
+
 </resources>

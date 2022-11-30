@@ -29,14 +29,14 @@ class ListCompaniesAdapter(private val clickListener: OnListItemClickListener) :
                 itemRvImage.loadCircle(companyDto.img)
                 itemRvTitle.text = companyDto.name
                 itemRvCard.setOnClickListener {
-                    clickListener.onItemClick(companyDto)
+                    clickListener.onItemClick(companyDto.id)
                 }
             }
         }
     }
 
     interface OnListItemClickListener {
-        fun onItemClick(data: CompanyDto)
+        fun onItemClick(id: String)
     }
 
     class ItemCallback : DiffUtil.ItemCallback<CompanyDto>() {

@@ -6,11 +6,11 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 
 abstract class BaseViewModel<T> : ViewModel() {
 
-    abstract val liveData: LiveData<T>
+    abstract val liveData: LiveData<AppState<T>>
     protected val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         handleError(throwable)
     }
 
-    abstract fun getData()
+    abstract fun getData(id: String?)
     abstract fun handleError(error: Throwable)
 }

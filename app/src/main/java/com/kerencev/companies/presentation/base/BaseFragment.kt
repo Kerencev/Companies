@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.kerencev.companies.presentation.listcompanies.ListCompaniesState
+import com.kerencev.companies.presentation.main.Navigation
 
 abstract class BaseFragment<T : ViewBinding, V>(
     private val inflateBinding: (
@@ -16,16 +16,22 @@ abstract class BaseFragment<T : ViewBinding, V>(
     private var _binding: T? = null
     protected val binding: T
         get() = _binding!!
+    protected var activity: Navigation? = null
 
-    protected fun renderData(state: ListCompaniesState<V>) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        activity = requireActivity() as? Navigation
+    }
+
+    protected fun renderData(state: AppState<V>) {
         when (state) {
-            is ListCompaniesState.Success -> {
+            is AppState.Success -> {
                 showSuccess(state.data)
             }
-            is ListCompaniesState.Loading -> {
+            is AppState.Loading -> {
                 showLoading()
             }
-            is ListCompaniesState.Error -> {
+            is AppState.Error -> {
                 showError()
             }
         }
@@ -46,6 +52,7 @@ abstract class BaseFragment<T : ViewBinding, V>(
 
     override fun onDestroyView() {
         _binding = null
+        activity = null
         super.onDestroyView()
     }
 }

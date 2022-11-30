@@ -3,4 +3,9 @@
     <string name="reload">Перезагрузить</string>
     <string name="image_of_the_company">Картинка компании</string>
     <string name="loading_fail_info">Не удалось загрузить данные</string>
+    <string name="url">Сайт:</string>
+    <string name="phone">Телефон:</string>
+    <string name="no_data">Данные не указаны</string>
+    <string name="address">Адрес:</string>
+    <string name="route">Построить маршрут</string>
 </resources>

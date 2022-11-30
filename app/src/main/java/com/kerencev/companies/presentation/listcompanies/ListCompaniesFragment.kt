@@ -17,11 +17,14 @@ class ListCompaniesFragment :
         FragmentListCompaniesBinding::inflate
     ) {
 
-    private val viewModel: BaseViewModel<ListCompaniesState<CompanyDto>> by viewModel(named(COMPANIES_VIEW_MODEL))
+    private val viewModel: BaseViewModel<CompanyDto> by viewModel(named(COMPANIES_VIEW_MODEL))
     private val adapter: ListCompaniesAdapter by lazy {
         ListCompaniesAdapter(object : ListCompaniesAdapter.OnListItemClickListener {
-            override fun onItemClick(data: CompanyDto) {
-                TODO("open details fragment")
+            override fun onItemClick(id: String) {
+                activity?.navigateToDetailsFragment(
+                    hideFragment = this@ListCompaniesFragment,
+                    companyId = id
+                )
             }
         })
     }
@@ -56,7 +59,7 @@ class ListCompaniesFragment :
             recyclerView.makeGone()
             progress.makeGone()
             errorInfo.makeVisible()
-            btnReload.setOnClickListener { viewModel.getData() }
+            btnReload.setOnClickListener { viewModel.getData(null) }
         }
     }
 }

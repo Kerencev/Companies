@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fragment_details_content_margin_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/fragment_details_title_margin_top"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                tools:text="By Park Inn.Ижевск" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/fragment_details_img_width"
+                android:layout_height="@dimen/fragment_details_img_height"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/fragment_details_img_margin_top"
+                android:contentDescription="@string/image_of_the_company"
+                tools:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_details_description_margin_top"
+                android:textSize="@dimen/fragment_details_description_text_size"
+                tools:text="где вы сможете насладиться прохладительными напитками и яствами.\r\n\r\nОпытный шеф-повар представит все богатство выбора традиционной европейской кухни и нестандартные авторские блюда. Естественная европейская кухня славится широким ансамблем блюд из овощей и мяса с небольшим добавлением приправ и специй. Это способствует достижению оптимально насыщенного и естественного вкуса компонентов. Перед употреблением блюда рекомендуется заказать аперитив – какой-либо спиртной напиток – для повышения аппетита и лучшего усвоения пищи. \r\n\r\nОпределить наше точное местоположение поможет сайт Ижевска. С нетерпением ожидаем появления новых гостей." />
+
+            <TextView
+                android:id="@+id/url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_details_url_margin_top"
+                android:autoLink="web"
+                android:text="@string/url"
+                android:textSize="@dimen/fragment_details_url_text_size"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_details_phone_margin_top"
+                android:autoLink="phone"
+                android:text="@string/phone"
+                android:textSize="@dimen/fragment_details_phone_text_size"
+                android:textStyle="italic" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_details_linear_address_margin_top"
+                android:layout_marginBottom="@dimen/fragment_details_linear_address_margin_bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:text="@string/address"
+                    android:textSize="@dimen/fragment_details_address_text_size"
+                    android:textStyle="italic"
+                    tools:text="ndafshkbdasfhbhjasdfbhdsbahbasdfjhbdsjafhbhdsafbhbsdafhb" />
+
+                <ImageButton
+                    android:id="@+id/btnRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:contentDescription="@string/route"
+                    android:src="@drawable/icon_route" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/errorInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/fragment_list_companies_error_info_padding"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_fail_info"
+            android:textSize="@dimen/fragment_list_companies_error_info_text_size" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reload" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>
